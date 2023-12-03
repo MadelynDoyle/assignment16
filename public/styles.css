@@ -3,54 +3,56 @@
     --secondary: lightblue;
 }
 
-
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: azure;
+    background-color: bisque;
 }
 
 .book {
-    padding: 10px;
-    margin: 10px;
-    background: gray;
-    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+    background: blanchedalmond; 
+    border-radius: 8px;
 }
 
 .book img {
-    max-width: 90%;
+    max-width: 100%;
     display: block;
     margin: auto;
+    border-radius: 5px;
 }
 
 #book-details-column {
-    padding: 10px;
-    margin: 10px;
-    background: lightblue;
-    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+    background: #add8e6;
+    border-radius: 8px;
 }
 
 #add-link {
     font-size: 2em;
-    border: 1px solid lightpink;
+    border: 2px solid #ffb6c1;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 #edit-link {
     float: right;
-    margin-right: 10px;
+    margin-right: 15px;
+    color: cyan; 
 }
 
 #delete-link {
     float: right;
+    color: pink; 
 }
 
 #add-edit-book-container {
-    padding: 10px;
-    margin: 10px;
-    background: lightblue;
-    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+    background: lightsalmon; 
+    border-radius: 8px;
 }
-
 
 /* Form */
 
@@ -63,17 +65,16 @@ label {
 }
 
 #maincharacters-p input {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 #add-maincharacter {
-    color: darkblue;
-    font-size: 0.75em;
+    color: darkcyan; 
+    font-size: 1em;
     text-align: right;
 }
 
-
-/* Modal Dialog */
+/* Modal */
 
 #modal-background {
     position: fixed;
@@ -84,37 +85,37 @@ label {
     width: 100%;
     height: 100%;
     overflow: scroll;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-
-/* Modal Content */
+/* Modal */
 
 .dialog {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 100%;
+    border: 2px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
 }
 
 .dialog img {
-    max-width: fit-content;
+    max-width: 100%;
     display: block;
     padding: 30px 5px 30px 30px;
     margin: auto;
+    border-radius: 5px;
 }
 
-
-/* The Close Button */
+/* close */
 
 .close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    padding: 0px 5px;
+    padding: 0px 10px;
 }
 
 .close:hover,
@@ -124,8 +125,7 @@ label {
     cursor: pointer;
 }
 
-
-/* Typography */
+/* type */
 
 #main-nav-items {
     font-size: 1.2em;
@@ -133,7 +133,7 @@ label {
 
 a {
     text-decoration: none;
-    color: lightpink;
+    color: #ffb6c1; /* LightPink */
 }
 
 .hidden {
@@ -144,8 +144,7 @@ a {
     opacity: 0;
 }
 
-
-/* Larger Resolutions */
+/* media */
 
 @media (min-width: 600px) {
     .columns {
@@ -157,10 +156,10 @@ a {
         flex: 1;
     }
     .book {
-        width: 25%;
+        width: 30%;
     }
     #add-edit-book-container {
-        max-width: 30%;
+        max-width: 40%;
         margin: auto;
     }
 }

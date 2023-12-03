@@ -14,8 +14,8 @@ mongoose
   .connect(
     "mongodb+srv://doylemr:tr3D7lUfsErph7se@cluster0.afz2cbd.mongodb.net/?retryWrites=true&w=majority"
   )
-  .then(() => console.log("Connected to mongodb..."))
-  .catch((err) => console.error("could not connect ot mongodb...", err));
+  .then(() => console.log("mongodb"))
+  .catch((err) => console.error("no mongodb", err));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
