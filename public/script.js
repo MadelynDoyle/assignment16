@@ -211,7 +211,7 @@ window.onload = () => {
     document.querySelector(".dialog").classList.add("transparent");
   };
 
-  document.getElementById("add-maincharacter").onclick = addMainCharacter;
+  document.getElementById("add-maincharacter").onclick = addMainCharacter();
 };
 
 
