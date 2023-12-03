@@ -204,12 +204,12 @@ const addMainCharacter = (e) => {
 
 window.onload = () => {
   showBooks();
-  document.getElementById("add-edit-book-form").onsubmit = addEditBook();
-  document.getElementById("add-link").onclick = showHideAdd();
+  document.getElementById("add-edit-book-form").onsubmit = addEditBook;
+  document.getElementById("add-link").onclick = showHideAdd;
 
   document.querySelector(".close").onclick = () => {
     document.querySelector(".dialog").classList.add("transparent");
   };
 
-  document.getElementById("add-maincharacter").onclick = addMainCharacter();
+  document.getElementById("add-maincharacter").onclick = addMainCharacter;
 };
