@@ -32,7 +32,7 @@ body {
 
 #add-link {
     font-size: 2em;
-    border: 1px solid crimson;
+    border: 1px solid lightpink;
 }
 
 #edit-link {
@@ -151,6 +151,7 @@ a {
     .columns {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
     }
     .two-columns div {
         flex: 1;
