@@ -2,7 +2,7 @@ const getBooks = async () => {
   try {
     return (await fetch("api/books/")).json();
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 };
 
@@ -35,7 +35,7 @@ const showBooks = async () => {
       };
     });
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 };
 
@@ -96,7 +96,7 @@ const deleteBook = async (book) => {
     });
 
     if (response.status !== 200) {
-      console.error("Error deleting");
+      console.log("Error deleting");
       return;
     }
 
@@ -104,14 +104,14 @@ const deleteBook = async (book) => {
     document.getElementById("book-details").innerHTML = "";
     resetForm();
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 };
 
 const populateEditForm = (book) => {
   const form = document.getElementById("add-edit-book-form");
   form._id.value = book._id;
-  form.title.value = book.title;
+  form.title.valueOf = book.title;
   form.genre.value = book.genre;
   form.rating.value = book.rating;
   populateMainCharacter(book);
@@ -158,13 +158,13 @@ const addEditBook = async (e) => {
     }
 
     if (response.status !== 200) {
-      console.error("Error posting data");
+      console.log("Error posting data");
       return;
     }
 
     const book = await response.json();
 
-    if (form._id.value !== "-1") {
+    if (form._id.value !== -1) {
       displayDetails(book);
     }
 
@@ -172,7 +172,7 @@ const addEditBook = async (e) => {
     document.querySelector(".dialog").classList.add("transparent");
     showBooks();
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 };
 
@@ -191,7 +191,7 @@ const resetForm = () => {
 const showHideAdd = (e) => {
   e.preventDefault();
   document.querySelector(".dialog").classList.remove("transparent");
-  document.getElementById("add-edit-title").textContent = "Add Book";
+  document.getElementById("add-edit-title").innerHTML = "Add Book";
   resetForm();
 };
 
